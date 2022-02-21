@@ -1,0 +1,667 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h3>2022 Canada Summer Games - Complete Project</h3>
+    <h4>Student: Tapan Piyush Mehta</h4>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core 3.1</a>.</p>
+</div>
+@*Note: added  w-50 ml-auto mr-auto to the carousel to limit the size. *@
+<div id="carouselExampleIndicators" class="carousel slide w-50 ml-auto mr-auto" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="~/images/sc1.jpg" class="d-block w-100 rounded" alt="...">
+            <div class="carousel-caption">
+                <h3>Swimming</h3>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="~/images/sc2.jpg" class="d-block w-100 rounded" alt="...">
+            <div class="carousel-caption">
+                <h3>High Jump</h3>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="~/images/sc3.jpg" class="d-block w-100 rounded" alt="...">
+            <div class="carousel-caption">
+                <h3>Volleyball</h3>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="~/images/sc4.jpg" class="d-block w-100 rounded" alt="...">
+            <div class="carousel-caption">
+                <h3>Rowing</h3>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="~/images/sc5.jpg" class="d-block w-100 rounded" alt="...">
+            <div class="carousel-caption">
+                <h3>Cycling</h3>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="~/images/sc6.jpg" class="d-block w-100 rounded" alt="...">
+            <div class="carousel-caption">
+                <h3>Football</h3>
+            </div>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+<br />
+<div class="jumbotron" style="padding:25px 25px 25px 25px;">
+    <h4 class=" text-center">Step wise creation of the Project</h4>
+    <div class="alert alert-primary" role="alert">
+        <p>
+            This project was done over the course of 4 months while studying the course PROG 1322 at Niagara College. It was built in 4 sections
+            with this being the final one where first one was the basic build up and slowly adding more and more functionalities.
+        </p>
+    </div>
+    <p>
+        For login id and passsword please mail me at <a href="mailto:mehtatapan44@gmail.com">mehtatapan44@gmail.com.</a>
+    </p>
+</div>
+<div class="row">
+    <nav id="navbar-example3" class="navbar navbar-light bg-light">
+
+        <nav class="nav nav-pills flex-column">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="nav-link" href="#Part-1">Part 1</a>
+            <nav class="nav nav-pills flex-column">
+                <a class="nav-link ml-3 my-1" href="#Part-1-A">Part 1(A)</a>
+                <a class="nav-link ml-3 my-1" href="#Part-1-B">Part 1(B)</a>
+            </nav>
+            <a class="nav-link" href="#Part-2">Part 2</a>
+            <nav class="nav nav-pills flex-column">
+                <a class="nav-link ml-3 my-1" href="#Part-2-A">Part 2(A)</a>
+                <a class="nav-link ml-3 my-1" href="#Part-2-B">Part 2(B)</a>
+                <a class="nav-link ml-3 my-1" href="#Part-2-C">Part 2(C)</a>
+            </nav>
+            <a class="nav-link" href="#Part-3">Part 3</a>
+            <nav class="nav nav-pills flex-column">
+                <a class="nav-link ml-3 my-1" href="#Part-3-A">Part 3(A)</a>
+                <a class="nav-link ml-3 my-1" href="#Part-3-B">Part 3(B)</a>
+                <a class="nav-link ml-3 my-1" href="#Part-3-C">Part 3(C)</a>
+            </nav>
+            <a class="nav-link" href="#Part-4">Part 4</a>
+            <nav class="nav nav-pills flex-column">
+                <a class="nav-link ml-3 my-1" href="#Part-4-A">Part 4(A)</a>
+                <a class="nav-link ml-3 my-1" href="#Part-4-B">Part 4(B)</a>
+                <a class="nav-link ml-3 my-1" href="#Part-4-C">Part 4(C)</a>
+            </nav>
+        </nav>
+    </nav>
+    <div style="width: 80%; height:800px; overflow: auto;">
+        <h4 id="Part-1">Part 1</h4>
+        <h5 id="Part-1-A">Part 1(A)</h5>
+        <p>
+            This is a simplified model of the 2022 Canada Summer Games.<br />
+            <img src="~/Images/Data_Modal.png" alt="Datamodal" /> <br />
+            I started the database model with 5 entities: Sport, Gender, Contingent, Coach and Athlete. In Models folder, we have created classes for each of
+            these entities, using naming conventions and data annotations in the classes to implement the
+            formatting and validation rules from the posted Canada Games Model. Annotations have been used to display friendly message for all validation requirements.
+            <ol type="1">
+                <li>
+                    Created a DbContext named CanadaGamesContext and used the Fluent API for the following:
+                    <ol type="a">
+                        <li>Adding a unique constraint to the AthleteCode property.</li>
+                        <li>Adding unique constraints for the Code properties of Contingent, Gender and Sport.</li>
+                        <li>None of the foreign key relationships use Cascade Delete.</li>
+                    </ol>
+                </li>
+                <li>
+                    Implemented a Database Migration and created the database.
+                    <ol type="a">
+                        <li>Added seed data for Contingents and Genders as per the included code file.</li>
+                        <li>Added code to seed at least 2 records of sample data in Coach and Athlete.</li>
+                    </ol>
+                </li>
+                <li>Added controllers/Views and scaffold all CRUD operations for both the Coach and Athlete entities.</li>
+                <li>Modify navigation so the user can easily access both of your controllers.</li>
+            </ol>
+        </p>
+        <h5 id="Part-1-B">Part 1(B)</h5>
+        <p>
+            In this part we will added additional validation and database error handling.
+            We will carry on with just the 5 entities: Sport, Gender, Contingent, Coach and Athlete.
+            <ol type="1">
+                <li>
+                    Experience has shown a need to help prevent unintended data entry errors for an
+                    Athlete’s height and weight figures.
+                    <ol type="a">
+                        <li>Minimum and maximum height entered are between 61cm and 245cm.</li>
+                        <li>Minimum and maximum weight entered are between 18kg and 180kg.</li>
+                        <li>
+                            In addition, the organizing committee and consulted with the medical staff and
+                            determined that the Body Mass Index (BMI) of Athletes must also be in a
+                            specified range. Not only will this help prevent data entry errors but if the data
+                            entered is correct, enforcing this restriction will reduce the chances of possible
+                            medical emergencies.
+                            <ol type="i">
+                                <li>BMI is calculated by the formula: weight in kg divided by the square of the height in meters. </li>
+                                <li>Added entity level validation using IValidatableObject on the Athlete class to make sure the BMI is between 15 and 40.</li>
+                            </ol>
+                        </li>
+                    </ol>
+                </li>
+
+                <li>
+                    In the Athlete and Coach controllers:
+                    <ol type="a">
+                        <li>
+                            Added code to handle any error raised by the database when changing data. In particular handle:
+                            <ol type="i">
+                                <li>Duplicate AthleteCode when creating or editing an Athlete.</li>
+                                <li>Attempt to delete any parent object with related child objects. For example, delete a Coach that works with any Athletes.</li>
+                            </ol>
+                        </li>
+                        <li>Modified the POST Update actions to use TryUpdateModel.</li>
+                    </ol>
+                </li>
+            </ol>
+        </p>
+        <h4 id="Part-2">Part 2</h4>
+        <h5 id="Part-2-A">Part 2(A)</h5>
+        <p>
+            In this part we add Sorting and Filtering to our Index Views and related data on the Coach Details View.
+            We will carry on with just the 5 entities: Sport, Gender, Contingent, Coach and Athlete.
+            <ol type="1">
+                <li>
+                    On the Athletes Index View.
+                    <ol type="a">
+                        <li>
+                            Added Filtering for the following:
+                            <ol type="i">
+                                <li>
+                                    Provided Select elements (DDLs) for all 4 foreign keys.
+                                    <ol type="1">
+                                        <li>
+                                            Supplied appropriate options at the top of the list for each foreign key filter.
+                                        </li>
+                                    </ol>
+                                <li>Filter for characters found anywhere in the Name of the athlete.</li>
+                                <li>Filter for characters found anywhere in the Media information.</li>
+                                <li>
+                                    In addition to the Filter button, provided a way for the user to Clear all filters.
+                                </li>
+                            </ol>
+                        </li>
+                        <li>Add Sorting by the Name (Last then First), Age, Contingent and Sport.</li>
+                    </ol>
+                </li>
+                <li>
+                    On the Coaches Index View.
+                    <ol type="a">
+                        <li>Added Filtering for characters found anywhere in the Name of the Coach.</li>
+                        <li>Added sorting so the user can separately sort by Last Name or First name.</li>
+                    </ol>
+                <li>
+                <li>
+                    On the Coaches Details View.
+                    <ol type="a">
+                        <li>
+                            Below the Coach’s basic information on the Details View, show a list of all the Athletes that they Coach.
+                            <ol type="i">
+                                <li>The List of Athletes only needs to show the Full Name, Age and Sport of the Athlete.</li>
+                            </ol>
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+        </p>
+        <h5 id="Part-2-B">Part 2(B)</h5>
+        <p>
+            In this part we added Paging to our Index Views Using Cookies to remember Page Size preference and the last Sort,
+            Filter and Page values used. We continue with the same 5 entities from Part 1: Sport, Gender, Contingent, Coach and Athlete.
+            <ol type="1">
+                <li>
+                    On the Index Views for both Athletes and Coaches.
+                    <ol type="a">
+                        <li>Used the PaginatedList class to add paging to the Views.</li>
+                        <li>Gave the user the chance to set their preferred page Size in a modal popup.</li>
+                        <li>Use a cookie to remember the user’s preferred page size.</li>
+                        <li>Added code so the last page, sort and filter parameters are persisted in a cookie and used when the user next returns to the Index View.</li>
+                        <li>The application remembers the user’s preferred Page Size for each Index View separately. Maybe they like to see 5 Coaches per page but 10 Athletes per page.</li>
+                    </ol>
+                </li>
+            </ol>
+        </p>
+        <h5 id="Part-2-C">Part 2(C)</h5>
+        <p>
+            In this part we added the no-load many-to-many relationship between Athlete and Sport.
+            Added the associative AthleteSport entity to the 5 entities from Part 1. This will allow us to track the other sports an
+            Athlete might participate in besides their main area of competition.
+            <br />
+            <img src="~/Images/Data_Modal_v2.png" alt="Data Modal version 2" /> <br />
+            <ol type="1">
+                <li>
+                    Added the new model class and made the necessary changes to the Sport and Athlete models to support the new relationship.
+                    <ol type="a">
+                        <li>The composite primary key for the associative entity, comprised of the two foreign keys.</li>
+                        <li>
+                            You will not be able to delete a Sport if any Athletes has selected it as one of
+                            their other Sports. However, if an Athlete is deleted then we would cascade delete all records of their other sports to maintain referential integrity.
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    Modified the Athletes controller and views so the user can select the other sports an Athlete might also participate in.
+                    <ol type="a">
+                        <li>
+                            Used Checkboxes on both the Create and Edit views with one checkbox for each Sport.
+                        </li>
+                        <li>
+                            Displayed the other Sports an Athlete might participate in on the Index, Details and Delete Views using a Bootstrap Popover if there is more than one.
+                            <ol type="i">
+                                <li>
+                                    Rearranged the Index view to fit this as an additional column.
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    Added a controller and views for the Sport entity.
+                    <ol type="a">
+                        <li>
+                            Added appropriate database error handling (Try/Catch blocks) to the controller and change the Edit process to use TryUpdateModel.
+                            <ol type="i">
+                                <li>We didn't' add other sorting or filtering but added paging to the Index View with the Sports listed in alphabetical order.</li>
+                            </ol>
+                        </li>
+                        <li>
+                            Used two List Boxes on both the Create and Edit views to allow the user to select multiple Athletes who play the sport.
+                        </li>
+                        <li>
+                            Displayed the list of Athletes who also play the Sport on the Index view using a
+                            Bootstrap Collapse if there is more than one.
+                            <ol type="i">
+                                <li>
+                                    Displayed the list of Athletes who also play the Sport on the Details View
+                                    using a table showing just the Athlete’s Name and Age. This is similar to what we did on the Coaches Details view in 2B.
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    Added both Auditing and Concurrency Control to the Athlete.
+                    <ol type="a">
+                        <li>When there is a concurrency conflict user is given feedback, showing the differences between their version of the Athlete and what is in the database. </li>
+                        <li>
+                            We DO NOT worry about related data as a concurrency conflict so if two
+                            users edit the same Athlete at the same time but only make changes to the
+                            checkboxes it does not matter. Since an Athlete already has their main sport defined by the SportID foreign key in
+                            the Athlete entity, we do not offer the same sport in the options to check off as an additional sport that they play.
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+        </p>
+        <h4 id="Part-3">Part 3</h4>
+        <h5 id="Part-3-A">Part 3(A)</h5>
+        <p>
+            In this part we makea design change to our Model as requested by the client.
+            After beta testing the application up on Azure, as per the client's request the Hometown is a Drop Down List so users can select it from the list
+            instead of typing the name1 . Too many errors have already been discovered as people make spelling
+            mistakes. They would like to be able to select the Contingent first and then have the choices for Hometown filtered for the selected Contingent.
+            We make the foreign key for the Hometown nullable and maintain the required foreign key for the contingent separately.
+            <br />
+            <img src="~/Images/Data_Modal_v3.png" alt="Data Modal version 3" /> <br />
+            <ol type="1">
+                <li>
+                    Removed the Hometown string property from the Athlete class and added the new model
+                    class for Hometown, making the necessary changes to the Contingent and Athlete models
+                    to support the new relationship.
+                    <ol type="a">
+                        <li>Added a summary property to the Hometown class to display the name of the city/town with a comma and then the Contingent Code. Eg. “Welland, ON”.</li>
+                        <li>Added a unique constraint on the Hometown so the combination of Name and Contingent is unique. You cannot have two city/towns with the same name in the same contingent.</li>
+                        <li>Restricted cascade delete from Contingent to Hometown.</li>
+                        <li>Seed Hometowns in each Contingent in your seed data.</li>
+                        <li>Seed each Athlete with a Hometown in their Contingent.</li>
+                    </ol>
+                </li>
+                <li>
+                    Modified the Athletes controller and Create/Edit views so after the user selects the Contingent, the list of Hometowns only shows options in that Contingent.
+                    <ol type="a">
+                        <li>The Hometown select list displays the summary property with name and Contingent Code (Eg. “Welland, ON”) sorted by the name.</li>
+                        <li>The Hometown is optional so they do not need to select one (perhaps the person entering the data does not have that information yet).</li>
+                        <li>Displayed the Hometown summary property on the Details and Delete Views. We noticed that many students included this in their initial design for the Modeling exercise.</li>
+                    </ol>
+                </li>
+                <li>
+                    Added controllers and views for the Contingent, Hometown and Gender entities.
+                    <ol type="a">
+                        <li>Addedappropriate database error handling (Try/Catch blocks) to the controllers and changed the Edit process to use TryUpdateModel.</li>
+                    </ol>
+                </li>
+                <li>
+                    Added a Lookups controller with an Index View allowing the user to maintain the Contingent, Hometown and Gender values starting from the one Index.
+                    <ol type="a">
+                        <li>Used the actual Controllers/Views for Create, Edit and Delete for each entity but always returned the user to the common Lookups Index.</li>
+                        <li>Added a single link to the navigation menu to Maintain Lookup Values.</li>
+                    </ol>
+                </li>
+                <li>Published the application to Azure so that it is possible to access it from anywhere on the Internet.</li>
+            </ol>
+        </p>
+        <h5 id="Part-3-B">Part 3(B)</h5>
+        <p>
+            In this part added new features requested by the client along with classes to support them.
+            <ol type="1">
+                <li>
+                    One feature our client had requested was the ability to upload a profile picture of each Athlete.
+                    <ol type="a">
+                        <li>A small thumbnail of the image is shown right on the Index view for each Athlete.</li>
+                        <li>A larger one (max size you define) is on the Details and Edit Views.</li>
+                        <li>When Editing, the user is able to replace the image or just remove it.</li>
+                        <li>If an Athlete is deleted, then their profile picture is automatically deleted as well.</li>
+                    </ol>
+                </li>
+                <li>
+                    The Canada Games committee had asked us to add a new feature to the Athlete. They need
+                    to be able to upload documents related to the athlete’s health, including Proof of Vaccination
+                    for COVID-19.
+                    <ol type="a">
+                        <li>
+                            An Athlete might need many documents, but each document relates back to a single
+                            Athlete.
+                            <ol type="1">
+                                <li>
+                                    If an Athlete is deleted, all related documents are automatically deleted as
+                                    well (Cascade Delete).
+                                </li>
+                            </ol>
+                        </li>
+                        <li>While creating or editing an Athlete, the user is able to select multiple files at once and upload them to the Athlete.</li>
+                        <li>The user isable to click links to download the related documents.</li>
+                        <li>The Athletes/Details view also shows a list of all uploaded documents that relate to the Athlete with links to download them. </li>
+                    </ol>
+                </li>
+                <li>
+                    Added a new controller for managing the uploaded documents with the following:
+                    <ol type="a">
+                        <li>
+                            Index View showing the file names of the Documents along with the name of the Athlete it relates to.
+                            <ol type="i">
+                                <li>
+                                    Added filters for:
+                                    <ol type="1">
+                                        <li>Athlete with an All option.</li>
+                                        <li>Characters in the File Name.</li>
+                                    </ol>
+                                </li>
+                                <li>Added paging but always sort by file name.</li>
+                            </ol>
+                        </li>
+                        <li>The Index also has links for both downloading and deleting the documents.</li>
+                        <li>
+                            Added a Description property to the Athlete Document and allow the user to edit
+                            both the File Name and Description from the new controller. Of course, descriptions
+                            cannot be added until after files have been uploaded.
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+        </p>
+        <h5 id="Part-3-C">Part 3(C)</h5>
+        <p>
+            In this part we added the Event and Placement entities. The data model was been revised (version 4) by removing the unique constraint from Event and
+            adding event Type for Individual/Team. We didn't add a controller for Events since they are preset for 2022 and will not be changing.
+            <br />
+            <img src="~/Images/Data_Modal_v4.png" alt="Data Modal version 4" /> <br />
+            <ul>
+                <li>
+                    “Classes for Events and Placements.txt” contain the required code to add the two classes and relate them to Athlete, Sport and Gender.
+                    <ul>
+                        <li>
+                            Added a “PlacementOrdinal” summary property to Placement that returns
+                            the appropriate ordinal such as 1st, 2nd, 3rd etc. for the Place value.
+                        </li>
+                    </ul>
+                <li>
+            </ul>
+            <ol type="1">
+                <li>
+                    Added a Master/Detail for Athlete/Placement. Created a controller/views based on Placement.
+                    <ol type="a">
+                        <li>
+                            The Athlete Detail information should be shown at the top of the Index View.
+                            <ol type="i">
+                                <li>Used Bootstrap features such as Collapse to help make the details for the Athlete available without taking up too much space on the screen.</li>
+                            </ol>
+                        </li>
+                        <li>
+                            Showing a listing of Placements for the Athlete below the Athlete Details.
+                            <ol type="i">
+                                <li>
+                                    This list shows the placement, gender, sport, event type/name, and comments for the placement.
+                                    <ol type="1">
+                                        <li>
+                                            Since comments can be very long, just showing the first few words of the comment
+                                            and allowing the user to see the rest if they click on the displayed words.
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    Added sorting, filtering, and paging to the placement list:
+                                    <ol type="1">
+                                        <li>Sorted by place, sport and event name.</li>
+                                        <li>Filtered by sport or characters entered into the comments.</li>
+                                        <li>Allowed the user to set the page size they prefer.</li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    The user is able to do CRUD operations (add, update or remove) on placements, and returns them to the Master/Detail page to see the changes they have made.
+                                    <ol type="1">
+                                        <li>Shows the name of the Athlete near the top of the page as you do CRUD operations on Placements.</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            Incorporated the Master/Detail page into the rest of the application:
+                            <ol type="1">
+                                <li>It functions as the Details View for an Athlete and has links to either Edit the Athlete or return to the Athlete List.</li>
+                                <li>After creating a new Athlete, the Master/Detail page is displayed, allowing them to start recording placements in events right away.</li>
+                            </ol>
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+            When adding or updating a placement, the user is only to select events that:
+            <ul>
+                <li>Matches the Athlete’s gender</li>
+                <li>Matches either their main sport or one of their alternate sports.</li>
+            </ul>
+
+        </p>
+        <h4 id="Part-4">Part 4</h4>
+        <h5 id="Part-4-A">Part 4(A)</h5>
+        <p>
+            In this part we added Authentication and Authorization using Identity.
+            <ul>
+                <li>
+                    Removed the Timestamp from the Auditable class and add it directly into Athlete.
+                    <ul>
+                        <li>
+                            Note that we are only checking for concurrency on Athlete records. If we decide
+                            to check for concurrency errors on additional entities, we can directly add the
+                            Timestamp property to them as well.
+                        </li>
+                    </ul>
+                </li>
+                <li> Made both the Coach and Placement classes Auditable by inheriting from the Auditable class. The Athlete, Coach and Placement model classes all inherit from Auditable.</li>
+            </ul>
+            Instructions:
+            <ol type="1">
+                <li>
+                    Migrations for ApplicationDbContext are called in Program.cs. Added a class to
+                    seed data for the security system and called it to run in Program.cs as well.
+                </li>
+                <li>
+                    Used the Seed to do the following:
+                    <ol type="a">
+                        <li>
+                            Created roles called “Admin”, “Security”, “Supervisor” and “Staff”
+                            <ol type="i">
+                                <li>
+                                    Created user admin1@outlook.com with password "need to contact on <a href="mailto:mehtatapan44@gmail.com">mehtatapan44@gmail.com.</a> for password" and add it to
+                                    both the Admin and Security roles.
+                                </li>
+                                <li>
+                                    Created user security1@outlook.com with password "need to contact on <a href="mailto:mehtatapan44@gmail.com">mehtatapan44@gmail.com.</a> for password" and add it
+                                    to just the Security role.
+                                </li>
+                                <li>
+                                    Created user supervisor1@outlook.com with password "need to contact on <a href="mailto:mehtatapan44@gmail.com">mehtatapan44@gmail.com.</a> for password" and add
+                                    it to the Supervisor role.
+                                </li>
+                                <li>
+                                    Created user staff1@outlook.com with password "need to contact on <a href="mailto:mehtatapan44@gmail.com">mehtatapan44@gmail.com.</a> for password" and add it to
+                                    the Staff role.
+                                </li>
+                            </ol>
+                        </li>
+                        <li>Create user user1@outlook.com with password "password”, not in any role.</li>
+                    </ol>
+                </li>
+                <li>
+                    Modifed access to the application as follows:
+                    <ol type="a">
+                        <li>Anyone can access the home controller (all actions)</li>
+                        <li>
+                            A user who is logged in but not in any role can also:
+                            <ol type="i">
+                                <li>View the list of Athletes.</li>
+                                <li>View the list of Coaches.</li>
+                                <li> View the list of Lookup Values.</li>
+                            </ol>
+                        </li>
+                        <li>
+                            A "Staff" user can also:
+                            <ol type="i">
+                                <li>Create and edit Hometowns but cannot delete any of them.</li>
+                                <li>Create new Coaches.</li>
+                                <li>
+                                    Create new Athletes.
+                                    <ol type="1">
+                                        <li>Edit a Coach or Athlete only if they created the record.</li>
+                                    </ol>
+                                </li>
+                                <li>View full details of an Athlete and their placements in events.</li>
+                                <li>View the list of Sports and the Sport details which lists both Main and Alternate Athletes in the Sport.</li>
+                                <li>View the Athlete Document Index but cannot download documents.</li>
+                            </ol>
+                        </li>
+                        <li>
+                            A " Supervisor " user can also:
+                            <ol type="i">
+                                <li>View, Create, Download and Edit all data, but can only delete the data listed below:
+                                </li>
+                                <li>Can delete Hometowns.</li>
+                                <li>Can delete Athlete Placements only if they created the record.</li>
+                            </ol>
+                        </li>
+                        <li>An "Admin" user can do anything except assign users to roles.</li>
+                        <li>A “Security” user is essentially like a user who is logged in but not in any role
+                            except that they will be able to assign users to roles in the system.
+                        </li>
+                    </ol>
+                    Clarification for Authorized Access…
+                </li>
+                <img src="~/Images/Access_Table.png" alt="Page Access Table" />
+                <li>
+                    Added a UserRoles controller and views that will only allow users in the Security role to
+                    add and remove users from roles. No user is allowed to change their own roles!
+                </li>
+            </ol>
+        </p>
+        <h5 id="Part-4-B">Part 4(B)</h5>
+        <p>
+            In this part we provide summary data both in Views and Spreadsheets. In addition, we uploaded data from an Excel spreadsheet.
+            Instructions:
+            <ol type="1">
+                <li>
+                    The 2022 Canada Summer Games Committee has requested an onscreen “Placement Report” listing all Athletes and summarizing their placements in the events they have competed in. The report shows:
+                    <ol type="a">
+                        <li>Formal name of the Athlete (Last name, first name and middle initial)</li>
+                        <li>Contingent Code</li>
+                        <li>Average placement.</li>
+                        <li>Highest placement.</li>
+                        <li>Lowest placement.</li>
+                        <li>Total number of events they competed in. (Total Events)</li>
+                        <li>Count of how many distinct Sports they competed in. (Num. Sports)</li>
+                    </ol>
+                </li>
+                <li>
+                    In addition to the onscreen report, they want the option to download the same data in an
+                    Excel Spreadsheet. The spreadsheet has the following additional features:
+                    <ol type="a">
+                        <li>Shows the date and time the report was generated near the top of the report.</li>
+                        <li>Includes the Athlete’s Media Information as a comment in a cell at the end of the row for the Athlete.</li>
+                        <li>
+                            After the last row of data, it lists the following summary information:
+                            <ol type="i">
+                                <li>Total number of Athletes in the report</li>
+                                <li>Total number of Events included in the report</li>
+                            </ol>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    The committee has also requested the ability to upload an Excel spreadsheet with the
+                    names of new Coaches to add. It will have first, middle and last names in columns A, B
+                    and C.
+                    <ol type="a">
+                        <li>
+                            For each Coach, it checks if they are already in the database before adding them.
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+        </p>
+        <h5 id="Part-4-C">Part 4(C)</h5>
+        <p>
+            Instructions:
+            <ol type="1">
+                <li>Converted your MVC application to a Progressive Web App (PWA) so it can install directly on your Smartphone, Tablet, PC, Mac etc.</li>
+                <li>Used MailKit to add an Email Service for the Identity/Security System.</li>
+                <li>Modified the Athlete Index View so that it displays the Athlete records on Cards instead of in a Html Table on extra small, small and medium sized screens.</li>
+            </ol>
+        </p>
+    </div>
+</div>
+
+@section Scripts {
+<script>
+    //Register the service worker.
+    //Note is is still not "installable" without the manifest
+    if (navigator.serviceWorker.controller) {
+        console.log('Active service worker found, no need to register');
+    } else {
+        navigator.serviceWorker.register('sw.js', {
+            scope: './'
+        }).then(function (reg) {
+            console.log('Service worker has been registered for scope:' + reg.scope);
+        });
+    }
+</script>
+}
+

@@ -1,0 +1,96 @@
+﻿@model IEnumerable<CanadaGames.ViewModels.PlacementSummary>
+
+@{
+    ViewData["Title"] = "Placement Summary";
+}
+
+<h2>Placement Summary Report</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Athlete)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Contingent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Average)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Highest)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lowest)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Total_Events)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Number_of_Sports)
+            </th>
+        </tr>
+    </thead>
+    @{ 
+        int NumAthletes = 0;
+        int TotalEvents = 0;
+    }
+<tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Athlete)
+                @{ NumAthletes++; }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contingent)
+            </td>
+            <td>
+                @item.Average.ToString("n1")
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Highest)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lowest)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Total_Events)
+                @{ TotalEvents += item.Total_Events; }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Number_of_Sports)
+            </td>
+        </tr>
+    }
+<tr>
+    <td align="right">
+        <strong>Totals:</strong>
+    </td>
+    <td>
+        @NumAthletes Athletes
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+        @TotalEvents Events
+    </td>
+    <td>
+    </td>
+</tr>
+</tbody>
+</table>
